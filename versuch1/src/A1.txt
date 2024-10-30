@@ -67,3 +67,4 @@ Content-ID: <f_jttv53u21>							// ID um in Mail darauf zu verweisen
 
 [ Base64-kodierte Darstellung des Bildes ]
 
+--000000000000c3cfe2058538473b--        // Grenze
