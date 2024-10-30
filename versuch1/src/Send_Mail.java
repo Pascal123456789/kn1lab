@@ -8,13 +8,37 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage; 
 
 public class Send_Mail {
-	public static void main(String[] args) {
-		sendMail();   
+
+	public static void main(String[] args) {			
+		sendMail();   										// Versende die E-Mail
 	}
 	
+
+
 	public static void sendMail() {
+
+		
+		String to = "labrat@localhost"; 		// Name Ziel
+        String from = "sender@localhost";		// Name Absender
+        String host = "localhost";				// Name Host des SMTP-Servers
+
+		Properties properties = System.getProperties(); // System-Eigenschaften für SMTP-Konfiguration abrufen
+        properties.setProperty("mail.smtp.host", host); // SMTP-Servereigenschaft festlegen
+
+		// Erstellen einer Sitzung mit den SMTP-Eigenschaften
+        Session session = Session.getDefaultInstance(properties);
+
+
 		try {
-			// your code here
+			
+			MimeMessage message = new MimeMessage(session); 			// Erstellen der Nachricht
+            message.setFrom(new InternetAddress(from)); 				// Absender einfügen
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); 		// Empfänger hinzufügen
+            message.setSubject("Hello World"); 					// Betreff hinzufügen
+            message.setText("Hello World"); 						// Nachricht hinzufügen
+            Transport.send(message); 									// senden
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
