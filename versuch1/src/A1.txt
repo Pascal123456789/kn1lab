@@ -1,0 +1,14 @@
+
+Zusammenfassung:
+
+
+
+
+/MIME-Version: 1.0                          // MIME-Version der Nachricht
+Date: Fri, 17 Mar 2018 10:27:32 +0100       // Datum und Uhrzeit der Nachricht
+Message-ID: <...>                           // Eindeutige Kennung der Nachricht
+Subject: Vorfall X84F7IU6                   // Betreff der Nachricht
+From: Marcel Tannenbaum <marciT@gmail.com>  // Absender der Nachricht
+To: Michelle Braun <michelle.braun@HUK-COBURG.de> // Empfänger der Nachricht
+Content-Type: multipart/mixed; boundary="000000000000c3cfe2058538473b" // Nachrichtentyp Gemischte Nachricht (Text und Anhänge), getrennt durch Grenze
+
