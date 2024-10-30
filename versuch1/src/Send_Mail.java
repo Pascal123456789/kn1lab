@@ -22,8 +22,8 @@ public class Send_Mail {
         String from = "sender@localhost";		// Name Absender
         String host = "localhost";				// Name Host des SMTP-Servers
 
-		Properties properties = System.getProperties(); // System-Eigenschaften für SMTP-Konfiguration abrufen
-        properties.setProperty("mail.smtp.host", host); // SMTP-Servereigenschaft festlegen
+		Properties properties = System.getProperties(); 		// System-Eigenschaften für SMTP-Konfiguration abrufen
+        properties.setProperty("mail.smtp.host", host); 	// SMTP-Servereigenschaft festlegen
 
 		// Erstellen einer Sitzung mit den SMTP-Eigenschaften
         Session session = Session.getDefaultInstance(properties);
@@ -32,10 +32,10 @@ public class Send_Mail {
 		try {
 			
 			MimeMessage message = new MimeMessage(session); 			// Erstellen der Nachricht
-            message.setFrom(new InternetAddress(from)); 				// Absender einfügen
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); 		// Empfänger hinzufügen
-            message.setSubject("Hello World"); 					// Betreff hinzufügen
-            message.setText("Hello World"); 						// Nachricht hinzufügen
+            message.setFrom(new InternetAddress(from)); 				// Absender
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to)); 		// Empfänger
+            message.setSubject("Hello World"); 					// Betreff
+            message.setText("Hello World"); 						// Nachricht
             Transport.send(message); 									// senden
 
 
