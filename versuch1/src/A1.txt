@@ -1,5 +1,10 @@
 
 Zusammenfassung:
++ zuerst allgemeinen Infos zur Mail
++ Darstellung in Klartext
++ Darstellung in HTML
++ Foto 1 als Anhang
++ Foto 2 als Anhang
 
 
 
@@ -11,4 +16,54 @@ Subject: Vorfall X84F7IU6                   // Betreff der Nachricht
 From: Marcel Tannenbaum <marciT@gmail.com>  // Absender der Nachricht
 To: Michelle Braun <michelle.braun@HUK-COBURG.de> // Empfänger der Nachricht
 Content-Type: multipart/mixed; boundary="000000000000c3cfe2058538473b" // Nachrichtentyp Gemischte Nachricht (Text und Anhänge), getrennt durch Grenze
+
+
+--000000000000c3cfe2058538473b              // Anfang des Nachrichtenteils
+Content-Type: multipart/alternative; boundary="000000000000c3cfdd0585384739" // Zweite Grenze für alternative Textdarstellungen
+
+
+--000000000000c3cfdd0585384739
+Content-Type: text/plain; charset="UTF-8"  	// Definiert Nachrichtentyp als Text in UTF-8
+Content-Transfer-Encoding: quoted-printable 	// Kodierung des Textinhalts für Sonderzeichen
+
+
+[ Mail als Klartext ]
+
+
+--000000000000c3cfdd0585384739			// Grenze 
+Content-Type: text/html; charset="UTF-8"	// Darstellungs als HTML
+Content-Transfer-Encoding: quoted-printable	// Kodierung des Textinhalts für Sonderzeichen
+
+
+[ Mail als HTML ]
+
+
+--000000000000c3cfdd0585384739--		// Grenze
+--000000000000c3cfe2058538473b			// Grenze
+
+// Foto 1
+
+Content-Type: image/jpeg; name="photo_2018-03-16_17-48-04.jpg"			// Definiert Typ als Bild und dessen Namen
+Content-Disposition: attachment; filename="photo_2018-03-16_17-48-04.jpg"	// Definiert Typ als Anhang
+Content-Transfer-Encoding: base64						// Kodierung des Bildes (in base64)
+X-Attachment-Id: f_jttv53tb0							// Interner Bezeichner des Bildes
+Content-ID: <f_jttv53tb0>							// ID um in Mail darauf zu verweisen
+
+
+[ Base64-kodierte Darstellung des Bildes ]
+
+
+
+// Foto 2
+
+--000000000000c3cfe2058538473b			// Grenze
+
+Content-Type: image/jpeg; name="photo_2018-03-16_17-48-12.jpg"			// Definiert Typ als Bild und dessen Namen
+Content-Disposition: attachment; filename="photo_2018-03-16_17-48-12.jpg"	// Definiert Typ als Anhang
+Content-Transfer-Encoding: base64						// Kodierung des Bildes (in base64)
+X-Attachment-Id: f_jttv53u21							// Interner Bezeichner des Bildes
+Content-ID: <f_jttv53u21>							// ID um in Mail darauf zu verweisen
+
+
+[ Base64-kodierte Darstellung des Bildes ]
 
