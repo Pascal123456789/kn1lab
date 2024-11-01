@@ -1,6 +1,7 @@
 #!/bin/bash
 
-SSH_PUB_KEY=""
+SSH_PUB_KEY="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIBUiudQ1k+xlxyRDwSGlFBAcvENHRRW7XhvNZqTqWT7sTeeK+sYolhwANOy7NXmHbEk/aH+YFCKP/BsrmjVt69ALh3FBjS5qjlBK380yBibW1jss9dFue1nbMOsWTJWHFpLgkf5GDgPUJlRn7SgiZAO0Nm0ysoHuV7dSxgKu/7q/wy9+WGszro9IyNs2D3dGbIgXj1RTiKR/Am0XWz8zJyeHx+hpSYFDZ+cWOwI3rFiEU3t4HB0t17BZQRmobd9sM31dcazQs1BOg/5Za51+ihQ1jHXNN53g43/ow1/N4M8+grgrytqPTfNOLUaZFZ9hNtLl0AxKInIPsQJNTkVPD2FGvsxOxJtpzYGG/asl9niGv8drIRHIykdxtjNHsPuJU1Q9K9tnRytfiCBB70aXUQwyv/Db9C+oTQCRYsSb+Uhk6kk4bC8q8CTtsv6O2fMaa8Jd+qjUgcT6PUUE9jZssjO9toT0+YZ+JD89vru2lk2c67C/XNnH35BHJOT4Flhc= Pascal@LAPTOP-NERBKB5U"
+
 if [ -z "$SSH_PUB_KEY" ]; then
         echo "Please set variable \$SSH_PUB_KEY to your ssh public key."
         exit -1
